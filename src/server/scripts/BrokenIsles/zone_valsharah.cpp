@@ -35,10 +35,10 @@ namespace CenariusKeeper
 
     enum CreatureIds
     {
-        NPC_MALFURION_STORMRAGE   = 91462,
-        NPC_MALFURION_VEHICLE     = 91465,
-        NPC_MALFURION_TALKER      = 94588,
-        NPC_NYANDRA               = 91652,
+        NPC_MALFURION_STORMRAGE             = 91462,
+        NPC_MALFURION_SUMMON                = 91465,
+        NPC_NYANDRA                         = 91652,
+        NPC_KILLCREDIT_SPEAK_TO_MALFURION   = 91461,
     };
 
     enum SpellIds
@@ -76,9 +76,59 @@ namespace CenariusKeeper
         EVENT_NYANDRA_SEQUENCE  = 7,
         EVENT_NYANDRA_FOLLOW    = 8,
         EVENT_NYANDRA_STOP      = 9,
-        EVENT_KNEEL              = 10,
+        EVENT_KNEEL             = 10,
+    };
+
+    enum Etc
+    {
+        WP_END,
+    };
+
+    uint32 const malfurionpathSize = 19;
+    Position const malfurionPathToGrove[malfurionpathSize] =
+    {
+        { 2291.4734f, 6597.7544f, 138.30594f, 0.0f },
+        { 2297.9734f, 6634.7544f, 135.05594f, 0.0f },
+        { 2324.4734f, 6661.7544f, 134.05594f, 0.0f },
+        { 2333.4734f, 6670.0044f, 135.05594f, 0.0f },
+        { 2355.2234f, 6668.2544f, 138.80594f, 0.0f },
+        { 2370.7234f, 6663.7544f, 140.80594f, 0.0f },
+        { 2383.4734f, 6662.0044f, 141.80594f, 0.0f },
+        { 2397.9734f, 6658.2544f, 140.30594f, 0.0f },
+        { 2412.9734f, 6650.0044f, 138.80594f, 0.0f },
+        { 2424.7234f, 6636.7544f, 140.05594f, 0.0f },
+        { 2450.7234f, 6615.2544f, 136.55594f, 0.0f },
+        { 2470.2234f, 6594.0044f, 135.30594f, 0.0f },
+        { 2498.4734f, 6590.2544f, 134.30594f, 0.0f },
+        { 2534.4734f, 6594.2544f, 132.30594f, 0.0f },
+        { 2572.2234f, 6609.5044f, 127.30595f, 0.0f },
+        { 2601.9734f, 6634.5044f, 119.80595f, 0.0f },
+        { 2614.7234f, 6656.7544f, 113.05595f, 0.0f },
+        { 2614.7234f, 6679.2544f, 108.05595f, 0.0f },
+        { 2609.1667f, 6704.6987f, 104.28856f, 0.0f },
+    };
+
+    uint32 const malfurionpathSize1 = 14;
+    Position const malfurionPathtoNyandra[malfurionpathSize1] =
+    {
+        { 2610.267f, 6700.865f, 104.83893f, 0.0f },
+        { 2610.017f, 6701.865f, 105.08893f, 0.0f },
+        { 2609.767f, 6703.365f, 104.83893f, 0.0f },
+        { 2610.017f, 6704.865f, 104.83893f, 0.0f },
+        { 2610.017f, 6706.365f, 105.08893f, 0.0f },
+        { 2610.017f, 6709.115f, 104.83893f, 0.0f },
+        { 2609.767f, 6710.615f, 105.08893f, 0.0f },
+        { 2610.017f, 6715.115f, 104.83893f, 0.0f },
+        { 2610.017f, 6715.615f, 104.58893f, 0.0f },
+        { 2610.017f, 6716.615f, 104.58893f, 0.0f },
+        { 2609.267f, 6717.615f, 104.83893f, 0.0f },
+        { 2608.767f, 6718.865f, 104.83893f, 0.0f },
+        { 2608.517f, 6720.865f, 104.83893f, 0.0f },
+        { 2606.8586f, 6724.6426f, 104.887665f, 0.0f },
     };
 };
+
+
 
 
 void AddSC_valsharah()
