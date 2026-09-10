@@ -4019,6 +4019,14 @@ void SpellMgr::LoadSpellInfoCorrections()
     });
     /// Gilneas END ///
 
+    /// Val'sharah ///
+        ApplySpellFix({
+        181481, // Summon Malfurion (Cenarius, Keeper of the Grove)
+    }, [](SpellInfo* spellInfo)
+    {
+        const_cast<SpellEffectInfo*>(spellInfo->GetEffect(EFFECT_0))->TargetA = SpellImplicitTargetInfo(TARGET_DEST_DB);
+    });
+
     SpellInfo* spellInfo = NULL;
     for (uint32 i = 0; i < GetSpellInfoStoreSize(); ++i)
     {
